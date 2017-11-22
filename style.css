@@ -1,0 +1,538 @@
+   /*Start Main Rules*/
+body {
+  background-color: #F4F4F4;
+  font-family: Arial;
+  overflow-x: hidden;
+  padding: 0;
+  margin:0;
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4JVmoIcL2GfLV4MOU1JCA5mym-ruWPwAbquSGBdLMcCc_OJRc');
+}
+.container {
+  margin: auto;
+  width: 80%;
+}
+* {
+  box-sizing: border-box;
+}
+*::selection{background: #49c0ff ;}
+/*End Main Rules*/
+
+/*Start Slider*/
+.slider {
+  height: 100vh;                                           /******************************height*/
+  background: url('https://image.ibb.co/mBS3dG/mmexport1504990914952_011.jpg');
+  background-position: 0% 65%;
+  background-size: cover;
+  text-align: center;
+  overflow-x: hidden;
+  animation: zoom 60s 1s forwards;
+}
+@keyframes zoom {
+  0% {}
+  100% {}
+}
+.slider .nav {
+  /*position: fixed;
+  width: 100%;*/
+}
+.slider .nav h2 {
+  margin-top: 1.5%;
+  margin-left: 1.3%;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 7px;
+  font-size: 55px; 
+  mix-blend-mode: exclusion;
+  font-weight: bold;
+  color: antiquewhite;
+}
+.slider .nav ul {margin-right: 25%; margin-top: 20px;}
+.slider .nav ul li {font-family: 'Asap', sans-serif; font-size:16px; display:inline-block; text-transform: uppercase;mix-blend-mode: exclusion;}
+.slider .nav ul li a {color: #AAA;}
+.slider .nav ul li:first-of-type {position:relative}
+#audio_icon {position:absolute; right:120px;bottom:-9px;width:35px;cursor:pointer;z-index:2;mix-blend-mode: normal !important}
+#audio_icon:hover {border:2px solid black}
+@media (min-width:769px) and (max-width:1185px) {#audio_icon{right:40px;top:40px}}
+@media (max-width: 767px) {
+  .slider .nav ul li {
+    display: block !important;
+    float: right;
+    width: 100%;
+    font-size: 18px !important;
+    overflow-y: hidden;
+  }
+  .slider .nav ul li a {
+    border: none !important;
+  }
+  
+  .slider .nav ul {
+    position: absolute;
+    top: -10px; right: -60vw;
+  }
+  .slider {
+    background-position: 60% 65%;
+    position: relative;
+  }
+  .nav h2 {
+    font-size: 8vw !important;
+    margin-left: -20px !important;
+    margin-top: 2vh !important;
+  }
+  .slider .nav ul li:first-of-type {position:static}
+  #audio_icon {left:100px;top:0px} 
+}
+
+/*.slider .nav ul li a:hover {color:#000; border:5px solid #F00; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;}*/
+.slider .nav ul li a#a_about:hover {
+  color:#FAFAFA; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
+  border-left:5px solid #121212;
+  border-bottom:5px solid #121212;
+  border-top:5px solid #01A99C;
+  border-right:5px solid #01A99C;
+}
+.slider .nav ul li a#a_portfolio:hover {
+  color:#FAFAFA; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
+  border-left:5px solid #A2B2C1;
+  border-bottom:5px solid #A2B2C1;
+  border-top:5px solid #3A4551;
+  border-right:5px solid #3A4551;
+}
+.slider .nav ul li a#a_contact:hover {
+  color:#FAFAFA; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
+  border-left:5px solid #284563;
+  border-bottom:5px solid #284563;
+  border-top:5px solid #AADCD2;
+  border-right:5px solid #AADCD2;
+}
+
+.slider .nonav {
+  margin-top: 23%;
+  margin-right: 0%;
+  box-sizing: border-box;
+}
+.happy, .to, .see, .you, .in, .my, .website {
+  position: absolute;
+  font-size: 33vw;
+  mix-blend-mode: exclusion;
+  color: antiquewhite;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', monospace;
+  mix-blend-mode: exclusion;
+}
+#greeting {user-select:none;margin:0;padding:0}
+.happy {top:45vh; left:5vw; opacity:0; animation:1s 1.5s forwards vanish;} 
+.to {top:45vh; left:30vw; opacity:0; animation:1s 2.5s forwards vanish;}
+.see {top:45vh; left:20vw; opacity:0; animation:1s 3.5s forwards vanish;}
+.you {top:45vh; left:10vw; opacity:0; animation:1s 4.5s forwards vanish;}
+/*.in {top:40vh; left:30vw; opacity:0; animation:1s 4s forwards vanish;}
+.my {top:40vh; left:30vw; opacity:0; animation:1s 5s forwards vanish;}
+.website {top:40vh; left:3vw; opacity:0; animation:1s 6s forwards vanish;font-size: 20vw;}*/
+
+/* animation shorthand: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name */
+@keyframes vanish {
+  0% {opacity:0;}
+  50% {opacity:1}
+  99% {opacity:0; font-size:33vw;}
+  100% {font-size:2px;}
+}
+@media (max-width:767px) and (min-height:450px) {
+  .happy {top:20vh; left:5vw;}
+  .to {top:40vh; left:30vw;}
+  .see {top:60vh; left:20vw;}
+  .you {top:80vh; left:10vw;}
+
+}
+
+/*.nonav .dancer {
+  position: absolute;
+  color:#FFF;
+  font-family: Asap;
+  font-size: 50px;
+  top: 25vh; 
+  left: 30vh;
+  animation: dancing 4s 1;
+  animation-fill-mode: forwards;
+  font-weight: 900;
+  mix-blend-mode: exclusion;
+}
+.nonav .dancer p {display: inline;font-family: 'Inconsolata', monospace;}
+.nonav .dancer img {width: 30px; height: 30px;}
+@keyframes dancing {
+  0%  {top: 25vh;left: 25vw; color: antiquewhite;}
+  12.5% {top: 30vh;left: 50vw;}
+  25% {top: 80vh;left: 30vw;}
+  37.5% {top: 70vh;left: 60vw;opacity:1}
+  50% {top: 20vh;left: 45vw; font-size: 50px;}  
+  100% {top: 20vh;left: 30vw;opacity:0; font-size: 10px;}
+}*/
+.slider .nonav button {
+  width: 30%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto;
+  font-weight: bold;
+  margin-top: 10%;
+  letter-spacing: 1px;
+}
+.slider .nonav button:active + .love {display: block;}
+.slider .nonav .love {
+  display: none;
+  position: relative;
+  left: 20%;
+  font-size:170%;
+  background:linear-gradient(to right, red , yellow);
+  color:red;
+  width: 60%;
+  height: 14vh;
+}
+.slider .nonav .love i {
+  font-size: 6vh;
+}
+.slider .nonav h5 {color:#000 ;font-family: 'Acme', Helvetica, sans-serif; letter-spacing: 2px; background: linear-gradient(to right, rgba(200,200,0,0.5), rgba(255,0,0,0.5)); margin: 0 40%;}
+.slider .nonav h1 {color: #333 ; font-family: 'Merienda One', Helvetica, sans-serif; font-size: 50px;}
+@media (max-width: 767px) {
+  .slider .nonav h1 {
+    font-size: 8vw;
+  }
+  .slider .nonav {
+    margin-top: 30vh;
+  }
+  .slider .nonav h5 {
+    margin: 0 10%;
+  }
+  .slider .nav ul li a:hover {
+    color: #FFF !important;
+    padding: 0 !important;
+    margin:0 !important;
+  }
+}
+@media (min-width:440px) and (max-width:1185px) {.slider .nonav h1 {color: #01afb1} .slider .nav ul{right:-35vw !important}}
+@media (max-width:440px) {.slider .nonav h1 {mix-blend-mode: exclusion;color:#FFF}}
+
+/*End Slider*/
+
+
+/*Start About Me*/
+.aboutme {
+  height: 100vh;                                            /******************************height*/
+  
+}
+.aboutme .intro {
+  width: 50%;
+  margin: 0; padding:3%;
+  background-color: #F1AA90;
+  background: linear-gradient(to right, #434343 0%, black 100%);
+  height: 100vh;
+  overflow: hidden;
+}
+.aboutme .intro h2 {color: #04A0A7; margin: 3% 0 9% 0;}
+.aboutme .intro ul {}
+.aboutme .intro ul li {margin: 6.2vh 0;}
+.aboutme .image {
+  width: 50%;
+  margin:0;
+  background: linear-gradient(90deg, #01a99c 10%, #0698b1 90%);
+  height: 100vh;
+}
+.aboutme .image img {
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 8vh;
+  border-radius: 40px;
+}
+.aboutme .image blockquote p, .aboutme .image blockquote h5 {
+  font-family: 'Acme';
+  font-weight: 900;
+}
+.aboutme .image p {
+  font-size: 160%;
+}
+@media (min-width:769px) and (max-width:1185px) {.aboutme .intro ul li {margin:2.5vh;} .aboutme .intro ul{text-align: left;}}
+@media (max-width: 767px) {
+  .aboutme {
+    height: auto;
+  }
+  .aboutme .intro, .aboutme .image {
+    width: 100%;
+    height: auto;
+  }
+  .aboutme .intro ul {text-align: left; font-size: 15px; margin:0}
+}
+
+/*End About Me*/
+
+
+/*Start Portfolio*/
+.portfolio {
+  height: 100vh;                                           /******************************height*/
+}
+.portfolio .intro {
+  width: 30%;
+  margin:0; padding:5% 3% 0%;
+  background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+  height: 100vh;
+  color: #38424E;
+}
+.portfolio .intro h2 {margin-bottom: 9%; color:#752020;}
+.portfolio .intro h2 i {vertical-align: middle}
+
+.portfolio .intro p {color: #38424E; line-height: 1.7;}
+.portfolio .intro p img {width: 30px; margin-left: 3%; margin-top: -3%}
+.portfolio .intro p:last-of-type {font-size: 20px; color: #333; text-align: center; text-transform: uppercase;text-align: center}
+.portfolio .intro p a {color:#000;}
+.portfolio .intro p a:hover {font-weight: 900}
+.portfolio .images {
+  width: 70%;
+  margin:0; padding:0;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background: linear-gradient(to right, #434343 0%, black 100%);
+  height: 100vh;
+  font-family: 'Acme', Arial;
+  background: linear-gradient(to right, #000000d9 0%, #000000de 100%);
+}
+.portfolio .images .project {
+  width: 33.33333%;
+  height:50vh;
+  margin:0;
+  text-align: center;
+  padding: 8% 1% 1% 1%;
+}
+.portfolio .images .project img {
+  height: 20vh;
+  width: 60%;
+  border: 3px solid #CCC;
+  border-radius: 20px;
+}
+.portfolio .images .project h4 {margin-top: 5%;}
+.portfolio .images .project h5 {color: #888; text-align: center;}
+.portfolio .images .project a {color: #04A0A7;}
+.portfolio .images .project a:hover {color: #fff78f}
+
+.portfolio .images .project#p1 {/*background: linear-gradient(to right, #283c86, #45a247);*/}
+.portfolio .images .project#p2 {/*background: linear-gradient(to right, #20002c, #cbb4d4);*/}
+.portfolio .images .project#p3 {/*background: linear-gradient(to right, #73c8a9, #373b44);*/}
+.portfolio .images .project#p4 {/*background: linear-gradient(to right, #000000, #53346d);*/}
+.portfolio .images .project#p5 {/*background: linear-gradient(to right, #50c9c3, #96deda);*/}
+.portfolio .images .project#p6 {/*background: linear-gradient(to right, #283048, #859398);*/}
+
+@media (min-width:769px) and (max-width:1185px) {.portfolio .intro {padding:0} .portfolio .intro p {text-align: left;}}
+@media (max-width: 767px) {
+  .portfolio {
+    height: auto;
+  }
+  .portfolio .intro, .portfolio .images {
+    width: 100%;
+    height: auto;
+  }
+  .portfolio .images .project {
+  width: 100%;
+  }
+  .portfolio .images .project#p1 {margin-top: 40px;}
+  .portfolio .images .project {padding:0}
+  .portfolio .images .project img {height: 25vh;}
+}
+/*End Portfolio*/
+
+
+/*Start Contact me*/
+.contact {
+  height: 100vh;                                           /******************************height*/
+}
+.contact form {
+  width: 70%;
+  margin:0; padding:5% 0 0 0;
+  background-color: #BEB375;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  height: 100vh;
+  color: antiquewhite;
+}
+.contact form input, .contact form textarea {
+  margin-bottom: 6vh;
+}
+.contact form textarea {
+  width: 70%;
+  height: 30vh;
+}
+.contact form label {font-family: 'Acme', Arial; color: #FFCD01}
+.contact .intro {
+  width: 30%;
+  margin:0; padding:3%;
+  background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+  height: 100vh;
+  color: #2A4765;
+}
+.contact .intro h2 {margin-bottom: 12%;color: #752020;}
+.contact .intro h2 i {vertical-align: middle}
+.contact .intro p {color: #2A4765;}
+.contact .intro > p {margin-bottom:25%}
+.contact .intro ul li {color:#000; width:4vw; padding: 0; margin: 0 0.2vw 0 0.2vw;}
+#facebook:hover {color: #4267B2}
+#email:hover {color: #008542}
+#git:hover {color: #350F66}
+#codepen:hover {color: #937365}
+#love:hover {color: #F04}
+.contact .intro blockquote {margin-top:75%; margin-bottom:0; }
+.contact .intro blockquote p, .contact .intro blockquote h5 {
+  font-family: 'Acme';
+  font-weight: 900;
+}
+
+@media (min-width:769px) and (max-width:1185px) {.contact .intro p {text-align: left;}}
+@media (max-width: 767px) {
+  .contact {
+    height: auto;
+  }
+  .contact form, .contact .intro {
+    width: 100% !important;
+    height: auto;
+  }
+  .contact .intro ul li {
+    width: 12.5vw;
+    margin: 0 2.5vw 0 2.5vw;
+  }
+   #facebook {color: #4267B2}
+   #email {color: #008542}
+   #git {color: #350F66}
+   #codepen {color: #937365}
+   #love {color: #F04}
+}
+/*End Contact me*/
+
+/*Start Learning Curve*/
+.learning {
+  height: 100vh;                                           /******************************height*/
+}
+.learning .intro {
+  width: 30%;
+  margin:0; padding:3%;
+  background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); 
+  height: 100vh;
+  color: #262829;
+}
+.learning .intro h2 {color: #752020; margin-bottom:15%;}
+.learning .intro p {color:#262829; text-align: left;}
+.learning .intro p:last-of-type {font-size: 220%; color: #333; text-align: center;}
+.learning .curves {
+  width: 70%;
+  margin:0; padding:5% 3% 5% 3%;
+  background-color: antiquewhite;
+  background: linear-gradient(to right, #434343 0%, black 100%);
+  height: 100vh;
+  color:#7ED7D2;
+}
+.learning .curves .skill {margin-left:-10vh; margin-right:-10vh}
+.learning .curves .skill h3 {width:25%;display: inline-block; margin-bottom: 0%}
+.learning .curves .skill div {width: 61%; height: 4vh; background-color: #BBB; display: inline-block; border-radius:0px 10px 10px 0px;}
+.learning .curves .skill span {display:block; height: 4vh; line-height:25px ; background-color: #5F4055; color: #000; font-weight: 900; text-align: right; border-radius: 0px 5px 5px 0px;}
+
+@media (max-width: 767px) {
+  .learning {
+    height: auto !important;
+  }
+  .learning .intro, .learning .curves {
+    width: 100% !important;
+    height: auto;
+    padding: 6% 0 6% 0;
+  }
+  .learning .curves {
+    padding: -10px !important;
+  }
+  .learning .curves .skill {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .learning .curves .skill:first-of-type {margin-top: 5vh}
+  .learning .curves .skill:last-of-type {margin-bottom: 5vh}
+  .learning .curves .skill div {
+    margin-left: 10% !important;
+  }
+  .learning .curves .skill h3 {
+    font-size: 15px;
+  }
+}
+
+/*End Learning Curve*/
+.footer {
+  height: 4.6vh;
+  text-align: center;
+  font-family:ellipse;
+  font-weight: bold;
+  color: #CCC;
+}
+.footer p {
+  margin: 5px 0 0 0;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+/*Start Footer*/
+/*End Footer*/
+
+
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Start My Library*/
+
+.my-paragraph {
+  margin: 10px;
+  color: #888;
+  line-height: 1.4;
+  font-family: "Acme", "Century Gothic", CenturyGothic, Geneva, AppleGothic;
+  font-size:18px;
+  text-align: justify;
+}
+.my-heading {
+  margin: 10px;
+  color: #444;
+  font-size: 30px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.my-subheading {
+  margin: 10px;
+  font-size: 15px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.push-left {
+  float: left;
+  margin: 0 5% 0 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.push-right {
+  float: right;
+  margin: 0 0 0 5%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.no-overflow {
+  overflow: hidden;
+}
+.organizelistitems {margin:0;}
+.organizelistitems li{
+  color: #777;
+  font-weight: bold;
+  float: left;
+  display: inline;
+  padding: 0 25px 0 25px;
+}
+hr {
+  border-top: 1px solid #777;
+  margin:0;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+.aboutme .intro, .aboutme .image, .portfolio .intro, .portfolio .images, .contact form, .contact .intro, .learning .intro, .learning .curves {
+    border-radius: 4vw;
+  }
+@media (max-width:767px) {
+  .aboutme .intro, .aboutme .image, .portfolio .intro, .portfolio .images, .contact form, .contact .intro, .learning .intro, .learning .curves {
+    border-radius: 10vw;
+    margin-top: 0.1vw;
+    .slider {border-radius: 0 0 10vw 10vw;}
+  }
+}
+/*End My Library*/
+
