@@ -1,11 +1,10 @@
    /*Start Main Rules*/
 body {
-  background-color: #F4F4F4;
   font-family: Arial;
   overflow-x: hidden;
   padding: 0;
   margin:0;
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4JVmoIcL2GfLV4MOU1JCA5mym-ruWPwAbquSGBdLMcCc_OJRc');
+  background-color:#678390;
 }
 .container {
   margin: auto;
@@ -20,38 +19,34 @@ body {
 /*Start Slider*/
 .slider {
   height: 100vh;                                           /******************************height*/
-  background: url('https://image.ibb.co/mBS3dG/mmexport1504990914952_011.jpg');
+  background: url('https://image.ibb.co/crLgcw/mmexport1504990823140.jpg');
+	/*https://image.ibb.co/mBS3dG/mmexport1504990914952_011.jpg*/
   background-position: 0% 65%;
   background-size: cover;
   text-align: center;
   overflow-x: hidden;
-  animation: zoom 60s 1s forwards;
 }
-@keyframes zoom {
-  0% {}
-  100% {}
-}
+
 .slider .nav {
   /*position: fixed;
   width: 100%;*/
 }
-.slider .nav h2 {
+.slider .nav .logo {
   margin-top: 1.5%;
   margin-left: 1.3%;
-  font-family: 'Quicksand', sans-serif;
-  letter-spacing: 7px;
-  font-size: 55px; 
-  mix-blend-mode: exclusion;
-  font-weight: bold;
-  color: antiquewhite;
+  width:100px;
 }
+.slider .nav .logo img {
+  border-radius: 10px;
+}
+
 .slider .nav ul {margin-right: 25%; margin-top: 20px;}
 .slider .nav ul li {font-family: 'Asap', sans-serif; font-size:16px; display:inline-block; text-transform: uppercase;mix-blend-mode: exclusion;}
-.slider .nav ul li a {color: #AAA;}
+.slider .nav ul li a {color: #bd8c8c;}
 .slider .nav ul li:first-of-type {position:relative}
 #audio_icon {position:absolute; right:120px;bottom:-9px;width:35px;cursor:pointer;z-index:2;mix-blend-mode: normal !important}
 #audio_icon:hover {border:2px solid black}
-@media (min-width:769px) and (max-width:1185px) {#audio_icon{right:40px;top:40px}}
+@media (min-width:769px) and (max-width:1185px) {#audio_icon{right:40px;top:30px}}
 @media (max-width: 767px) {
   .slider .nav ul li {
     display: block !important;
@@ -72,8 +67,7 @@ body {
     background-position: 60% 65%;
     position: relative;
   }
-  .nav h2 {
-    font-size: 8vw !important;
+  .nav .logo {
     margin-left: -20px !important;
     margin-top: 2vh !important;
   }
@@ -83,40 +77,52 @@ body {
 
 /*.slider .nav ul li a:hover {color:#000; border:5px solid #F00; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;}*/
 .slider .nav ul li a#a_about:hover {
-  color:#FAFAFA; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
+  color:#FAFAFA; /*padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
   border-left:5px solid #121212;
   border-bottom:5px solid #121212;
   border-top:5px solid #01A99C;
-  border-right:5px solid #01A99C;
+  border-right:5px solid #01A99C;*/
 }
 .slider .nav ul li a#a_portfolio:hover {
-  color:#FAFAFA; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
+  color:#FAFAFA; /*padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
   border-left:5px solid #A2B2C1;
   border-bottom:5px solid #A2B2C1;
   border-top:5px solid #3A4551;
-  border-right:5px solid #3A4551;
+  border-right:5px solid #3A4551;*/
 }
 .slider .nav ul li a#a_contact:hover {
-  color:#FAFAFA; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
+  color:#FAFAFA; /*padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
   border-left:5px solid #284563;
   border-bottom:5px solid #284563;
   border-top:5px solid #AADCD2;
-  border-right:5px solid #AADCD2;
+  border-right:5px solid #AADCD2;*/
 }
 
 .slider .nonav {
-  margin-top: 23%;
-  margin-right: 0%;
+  margin-top: 20%;
+  margin-right: 40%;
   box-sizing: border-box;
+}
+#learn {
+  animation: 1s forwards 120 learndance;
+  font-size: 25px;
+  display:none;
+}
+#learn a {
+  text-decoration: none;
+  color: black;
+  font-family:Quicksand, monospace;
+}
+#learn a:hover {
+  color:#333
 }
 .happy, .to, .see, .you, .in, .my, .website {
   position: absolute;
   font-size: 33vw;
-  mix-blend-mode: exclusion;
   color: antiquewhite;
   text-transform: uppercase;
   font-family: 'Indie Flower', monospace;
-  mix-blend-mode: exclusion;
+  mix-blend-mode: difference;
 }
 #greeting {user-select:none;margin:0;padding:0}
 .happy {top:45vh; left:5vw; opacity:0; animation:1s 1.5s forwards vanish;} 
@@ -164,6 +170,8 @@ body {
   50% {top: 20vh;left: 45vw; font-size: 50px;}  
   100% {top: 20vh;left: 30vw;opacity:0; font-size: 10px;}
 }*/
+
+/*
 .slider .nonav button {
   width: 30%;
   padding-top: 5px;
@@ -187,12 +195,17 @@ body {
 .slider .nonav .love i {
   font-size: 6vh;
 }
-.slider .nonav h5 {color:#000 ;font-family: 'Acme', Helvetica, sans-serif; letter-spacing: 2px; background: linear-gradient(to right, rgba(200,200,0,0.5), rgba(255,0,0,0.5)); margin: 0 40%;}
-.slider .nonav h1 {color: #333 ; font-family: 'Merienda One', Helvetica, sans-serif; font-size: 50px;}
+*/
+
+.slider .nonav h5 {font-size:15px;color:#000 ;font-family: 'Acme', Helvetica, sans-serif; letter-spacing: 2px; background: linear-gradient(to right, rgba(200,200,0,0.5), rgba(255,0,0,0.5)); margin: 0 32%;opacity:0}
+.slider .nonav h1 {color: #333 ; font-size: 55px; opacity:0;font-family: 'Spectral SC', serif;
+}
+.fh,.sh {display:block;}
 @media (max-width: 767px) {
   .slider .nonav h1 {
-    font-size: 8vw;
+    font-size: 7vw;
   }
+  .fh,.sh{margin:10px;}
   .slider .nonav {
     margin-top: 30vh;
   }
@@ -204,9 +217,18 @@ body {
     padding: 0 !important;
     margin:0 !important;
   }
+  #learn a {
+    font-size: 20px;
+    color:#CCC;
+  }
+  #learn a:hover {
+    font-size: 20px;
+    color:#FFF;
+  }
 }
-@media (min-width:440px) and (max-width:1185px) {.slider .nonav h1 {color: #01afb1} .slider .nav ul{right:-35vw !important}}
-@media (max-width:440px) {.slider .nonav h1 {mix-blend-mode: exclusion;color:#FFF}}
+@media (min-width:440px) and (max-width:1185px) {.slider .nonav h1 {font-size:45px} .slider .nav ul{right:-35vw !important}.fh,.sh{margin:20px;}}
+@media (min-width:1185px) {.fh,.sh{margin:40px;}}
+/*@media (max-width:440px) {.slider .nonav h1 {color:#FFF}}*/
 
 /*End Slider*/
 
@@ -217,19 +239,21 @@ body {
   
 }
 .aboutme .intro {
-  width: 50%;
-  margin: 0; padding:3%;
+  width: 48%;
+  margin: 0.5% 1%; padding:3%;
   background-color: #F1AA90;
   background: linear-gradient(to right, #434343 0%, black 100%);
   height: 100vh;
   overflow: hidden;
 }
-.aboutme .intro h2 {color: #04A0A7; margin: 3% 0 9% 0;}
+.aboutme .intro h2 {color: #04A0A7; margin: 3% 0 6% 0;}
 .aboutme .intro ul {}
 .aboutme .intro ul li {margin: 6.2vh 0;}
+.aboutme .intro ul li a {text-decoration: none;color:darkcyan}
+.aboutme .intro ul li a:hover {color: darkturquoise}
 .aboutme .image {
-  width: 50%;
-  margin:0;
+  width: 48%;
+  margin: 0.5% 1%;
   background: linear-gradient(90deg, #01a99c 10%, #0698b1 90%);
   height: 100vh;
 }
@@ -252,7 +276,6 @@ body {
     height: auto;
   }
   .aboutme .intro, .aboutme .image {
-    width: 100%;
     height: auto;
   }
   .aboutme .intro ul {text-align: left; font-size: 15px; margin:0}
@@ -266,8 +289,8 @@ body {
   height: 100vh;                                           /******************************height*/
 }
 .portfolio .intro {
-  width: 30%;
-  margin:0; padding:5% 3% 0%;
+  width: 28%;
+  margin:0.5% 1%; padding:5% 3% 0%;
   background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
   height: 100vh;
   color: #38424E;
@@ -276,36 +299,38 @@ body {
 .portfolio .intro h2 i {vertical-align: middle}
 
 .portfolio .intro p {color: #38424E; line-height: 1.7;}
+.portfolio .intro p span {color:#000}
 .portfolio .intro p img {width: 30px; margin-left: 3%; margin-top: -3%}
 .portfolio .intro p:last-of-type {font-size: 20px; color: #333; text-align: center; text-transform: uppercase;text-align: center}
 .portfolio .intro p a {color:#000;}
 .portfolio .intro p a:hover {font-weight: 900}
 .portfolio .images {
-  width: 70%;
-  margin:0; padding:0;
+  width: 68%;
+  margin:0.5% 1%; padding:0;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   background: linear-gradient(to right, #434343 0%, black 100%);
   height: 100vh;
   font-family: 'Acme', Arial;
-  background: linear-gradient(to right, #000000d9 0%, #000000de 100%);
+  background: linear-gradient(to right, #434343 0%, black 100%);
 }
 .portfolio .images .project {
   width: 33.33333%;
   height:50vh;
   margin:0;
   text-align: center;
-  padding: 8% 1% 1% 1%;
+  padding: 4% 1% 1% 1%;
 }
 .portfolio .images .project img {
   height: 20vh;
-  width: 60%;
+  width: 70%;
   border: 3px solid #CCC;
   border-radius: 20px;
 }
 .portfolio .images .project h4 {margin-top: 5%;}
-.portfolio .images .project h5 {color: #888; text-align: center;}
+.portfolio .images .project h5 {color: #888; text-align: center; font-size:15px;}
+.portfolio .images .project h5 span {color:#555}
 .portfolio .images .project a {color: #04A0A7;}
-.portfolio .images .project a:hover {color: #fff78f}
+.portfolio .images .project a:hover {color: #26C2C9}
 
 .portfolio .images .project#p1 {/*background: linear-gradient(to right, #283c86, #45a247);*/}
 .portfolio .images .project#p2 {/*background: linear-gradient(to right, #20002c, #cbb4d4);*/}
@@ -320,12 +345,13 @@ body {
     height: auto;
   }
   .portfolio .intro, .portfolio .images {
-    width: 100%;
     height: auto;
   }
   .portfolio .images .project {
   width: 100%;
+  height:auto;
   }
+  .portfolio .images .project h5 {margin-bottom: 30px;}
   .portfolio .images .project#p1 {margin-top: 40px;}
   .portfolio .images .project {padding:0}
   .portfolio .images .project img {height: 25vh;}
@@ -338,13 +364,26 @@ body {
   height: 100vh;                                           /******************************height*/
 }
 .contact form {
-  width: 70%;
-  margin:0; padding:5% 0 0 0;
+  width: 68%;
+  margin:0.5% 1%; padding:5% 0 0 0;
   background-color: #BEB375;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
   height: 100vh;
   color: antiquewhite;
+  text-align: center;
+  background: linear-gradient(to right, #434343 0%, black 100%);
 }
+.contact form h4 {
+  font-family: 'Maven Pro', Arial;
+}
+.contact form .img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://image.ibb.co/m8ZUHm/cultures2.jpg");
+  background-size: cover;
+  background-position: center;
+  width:50vw;
+  height: 60vh;
+  border-radius: 10px;
+}
+/*
 .contact form input, .contact form textarea {
   margin-bottom: 6vh;
 }
@@ -353,6 +392,7 @@ body {
   height: 30vh;
 }
 .contact form label {font-family: 'Acme', Arial; color: #FFCD01}
+*/
 .contact .intro {
   width: 30%;
   margin:0; padding:3%;
@@ -360,16 +400,18 @@ body {
   height: 100vh;
   color: #2A4765;
 }
+.contact .intro {width: 28%; margin:0.5% 1%}
 .contact .intro h2 {margin-bottom: 12%;color: #752020;}
 .contact .intro h2 i {vertical-align: middle}
 .contact .intro p {color: #2A4765;}
 .contact .intro > p {margin-bottom:25%}
-.contact .intro ul li {color:#000; width:4vw; padding: 0; margin: 0 0.2vw 0 0.2vw;}
-#facebook:hover {color: #4267B2}
-#email:hover {color: #008542}
-#git:hover {color: #350F66}
-#codepen:hover {color: #937365}
-#love:hover {color: #F04}
+.contact .intro ul {padding:0}
+.contact .intro ul li {width:2.3vw; padding: 0; margin: 0 1vw 0 1vw; font-size: 11px}
+#facebook {color: #3156A1} #facebook:hover {color: #4267B2}
+#email {color: #007431} #email:hover {color: #008542}
+#git {color: #130D44} #git:hover {color: #350F66}
+#codepen {color: #826254} #codepen:hover {color: #937365}
+#love {color: #E03} #love:hover {color: #F04}
 .contact .intro blockquote {margin-top:75%; margin-bottom:0; }
 .contact .intro blockquote p, .contact .intro blockquote h5 {
   font-family: 'Acme';
@@ -382,18 +424,13 @@ body {
     height: auto;
   }
   .contact form, .contact .intro {
-    width: 100% !important;
     height: auto;
   }
   .contact .intro ul li {
     width: 12.5vw;
     margin: 0 2.5vw 0 2.5vw;
+	font-size: 15px
   }
-   #facebook {color: #4267B2}
-   #email {color: #008542}
-   #git {color: #350F66}
-   #codepen {color: #937365}
-   #love {color: #F04}
 }
 /*End Contact me*/
 
@@ -402,8 +439,8 @@ body {
   height: 100vh;                                           /******************************height*/
 }
 .learning .intro {
-  width: 30%;
-  margin:0; padding:3%;
+  width: 28%;
+  margin:0.5% 1%; padding:3%;
   background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); 
   height: 100vh;
   color: #262829;
@@ -412,8 +449,8 @@ body {
 .learning .intro p {color:#262829; text-align: left;}
 .learning .intro p:last-of-type {font-size: 220%; color: #333; text-align: center;}
 .learning .curves {
-  width: 70%;
-  margin:0; padding:5% 3% 5% 3%;
+  width: 68%;
+  margin:0.5% 1%; padding:5% 3% 5% 3%;
   background-color: antiquewhite;
   background: linear-gradient(to right, #434343 0%, black 100%);
   height: 100vh;
@@ -429,7 +466,6 @@ body {
     height: auto !important;
   }
   .learning .intro, .learning .curves {
-    width: 100% !important;
     height: auto;
     padding: 6% 0 6% 0;
   }
@@ -452,14 +488,15 @@ body {
 
 /*End Learning Curve*/
 .footer {
-  height: 4.6vh;
+  height: 6vh;
   text-align: center;
   font-family:ellipse;
   font-weight: bold;
-  color: #CCC;
+  color: #EEE;
 }
 .footer p {
   margin: 5px 0 0 0;
+  line-height: 6vh;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
@@ -526,13 +563,42 @@ a:hover {
 
 .aboutme .intro, .aboutme .image, .portfolio .intro, .portfolio .images, .contact form, .contact .intro, .learning .intro, .learning .curves {
     border-radius: 4vw;
+	/*border:3px solid white;*/
+	box-shadow: 10px 5px rgba(85,85,85,0.9);
+	margin-top:5px
   }
+.aboutme .intro, .aboutme .image {margin-top:8px !important}
 @media (max-width:767px) {
   .aboutme .intro, .aboutme .image, .portfolio .intro, .portfolio .images, .contact form, .contact .intro, .learning .intro, .learning .curves {
     border-radius: 10vw;
-    margin-top: 0.1vw;
-    .slider {border-radius: 0 0 10vw 10vw;}
+    margin-top: 1vh;
+	width:96.5% !important;
+	margin-right:3%; margin-left:0.5%
+	}
+  .contact form {display:none;}
+  .slider {border-radius: 0 0 5vw 5vw}
+  
+}
+
+@keyframes learndance {
+  0% {
+    margin-top: 10vh;
+  }
+  50% {
+    margin-top: 12vh;
+  }
+  100% {
+    margin-top: 10vh;
   }
 }
+@keyframes opac0 {
+  0%{opacity:1}
+  100%{opacity:0;}
+}
+@keyframes opac1 {
+  0%{opacity:0}
+  100%{opacity:1;}
+}
+
 /*End My Library*/
 
