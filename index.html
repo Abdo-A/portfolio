@@ -1,15 +1,17 @@
+
+
 <!DOCTYPE html>
 <html lang="en" >
 
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" type="image/x-icon" href="Photos/mytabshortcut.jpg">
+    <link rel="shortcut icon" href="Photos/mytabshortcut.jpg">
     <title>Abdo's Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 	
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Acme|Anton|Asap|Dancing+Script|Maven+Pro|Quicksand|Amatic+SC|Indie+Flower|Inconsolata|Merienda+One|Leckerli+One" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Acme|Anton|Asap|Dancing+Script|Maven+Pro|Quicksand|Amatic+SC|Indie+Flower|Inconsolata|Merienda+One|Leckerli+One|Spectral+SC" rel="stylesheet" type="text/css">
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -20,11 +22,11 @@
 
 <body>
 
-  <!--Start Slider-->
+ <!--Start Slider-->
 <div class="slider">
   <div class="container">
     <div class="nav">
-        <h2 class="push-left">Abdo</h2>
+        <div class="push-left logo"><img src="https://image.ibb.co/n5TaLG/myreallogo.jpg"></div>
         <ul class="push-right organizelistitems">
           <li><img id="audio_icon" src="Photos/audio.png"><a href="#about" id="a_about">About</a></li>
           <li><a href="#portfolio" id="a_portfolio">Portfolio</a></li>
@@ -33,17 +35,20 @@
     </div>
     <div style="visibility:hidden">
     <audio id="audio">
-        <source src="https://goo.gl/cqcQXD">
+        <source src="website-intro.mp3">
     </audio> 
     </div>
     <div class="nonav">
-      <h5>->The world's most 'unique'..</h5>
-      <h1>Junior web Developer</h1>
+      <h5 id="ima">->My name is Abdo, I am a</h5>
+      <h1 id="desc"><span class="fh">Web</span> <span class="sh">Developer</span></h1>
+      <h2 id="learn"><a href="#about">Learn more about me <i class="fa fa-arrow-circle-down"></i></a></h2>
       <div id="greeting">
       <div class="happy">happy</div><div class="to">to</div><div class="see">see</div><div class="you">you ;)</div>
       </div>
+		<!--
       <button type="button" class="btn btn-primary">I agree</button>
       <div class="love"><i class="fa fa-heart fa-2x"></i><p>You're making me blush</p></div>
+		-->
     </div>
   </div>
 </div>
@@ -56,12 +61,12 @@
     <div class="container">
        <h2 class="my-heading">Who is 'Abdo'?</h2>
        <ul class="my-paragraph">
-         <li>I come from Egypt, the pyramids country!</li>
-         <li>I am studying Computer Engineering, at Ain Shams University.(One of the three top universities in Egypt, when it comes to Engineering)</li>
-         <li>I am an entry level front end web developer.</li>
-         <li>I have an experience in problem solving, using C++.</li>
-         <li>I have always enjoyed learning new things, reading and writing have been my thing for a while now.</li>
-         <li>Although I have only been to Romania, Thailand and China so far, I consider myself a hardcore traveller. I love travelling!</li>
+         <li>I'm from Egypt, the pyramids country! My full name is Abdelrahman Mohamadeen.</li>
+         <li>I am studying Computer Engineering, at Ain Shams University.(One of the three top universities in Egypt, when it comes to Engineering.)</li>
+         <li>I am experienced with a variety of technologies and programming languages, like C++, JavaScript, html and css.</li>
+         <li>I always enjoy learning new things, and I love reading.</li>
+         <li>I am an avid traveller, I have been to China, Romania and Thailand so far.</li>
+		 <li>View my resume <a href="https://drive.google.com/file/d/1ZMWOex2VyK1LoKvhaZ4cVrQ7TXgIcnJB/" target="_blank">here.</a></li>
        <ul>
     </div>
   </div>
@@ -70,7 +75,7 @@
        <img src="https://image.ibb.co/jRqdVw/Kevin_Mccanly.jpg" alt="My photo">
        <blockquote>
          <p>"You will always need to handle the encoming opportunities, because the right one will only come once."</p><br>
-         <h5>-A foolish boy</h5>
+         <!--<h5>-A foolish boy</h5>-->
        </blockquote>
      </div>
     </div>
@@ -82,27 +87,27 @@
 <div class="portfolio" id="portfolio">
   <div class="intro push-left">
     <h2 class="my-heading"><ins>Portfolio</ins> <i class="fa fa-file-text-o fa-2x"></i></h2>
-    <p class="my-paragraph">Okay! So you're one of those who get to see my works, aren't you lucky? <3<p> <br>
-    <p class="my-paragraph">I am so happy to demonstrate my works to you.<br><br>You can <a href="#contact">contact me</a> in the section below if you have a comment, or, most importantly, if you like my work!<img src="https://goo.gl/nKA7eN" alt="wink"><br><br></p><p class="my-paragraph">take a look :</p><br>
+    <p class="my-paragraph">Here are 6 of my works that demonstrate my programming experience using JavaScript.<p>
+    <p class="my-paragraph">I am glad to show you my works.<br>Note that all my works are made from scratch, <span>responsive</span> and mobile friendly.<br><br>You can <a href="#contact">contact me</a> in the section below if you have a comment, or, most importantly, if you like my work!<img src="https://goo.gl/nKA7eN" alt="wink"><br><br></p><p class="my-paragraph">take a look :</p><br>
   </div>
     <div class="images push-right no-overflow">
       <div class="project push-left" id="p1">
-        <a href="#"> <img src="https://goo.gl/wNBNuD" alt="p1"> <h4>Project 1</h4> </a> <h5 class="my-paragraph">It was a great project and I gained amazing experience.</h5>
+        <a href="http://abdo-musictree.bitballoon.com/" target="_blank"> <img src="https://image.ibb.co/nKPh3R/Music_Tree_tn.jpg" alt="p1"> <h4>The Music Tree</h4> </a> <h5 class="my-paragraph">A website that provides you with the kind of music you need, according to your current mood. <br><span>(I used HTML5, CSS3 and plain Javascript)<span></h5>
       </div>
       <div class="project push-left" id="p2">
-        <a href="#"> <img src="https://goo.gl/a3iK3N" alt="p2"> <h4>Project 2</h4> </a> <h5 class="my-paragraph">It was a great project and I gained amazing experience.</h5>
+        <a href="http://abdo-icanfly.bitballoon.com/" target="_blank"> <img src="https://image.ibb.co/dxkuHm/ICan_Fly_tn.jpg" alt="p2"> <h4>I Can Fly</h4> </a> <h5 class="my-paragraph">A website about an imaginary organization that is able to simply make people, well, fly. This is their official website, as for now. <br><span>(I used HTML5, CSS3 and plain Javascript with a little bit of jQuery)<span></h5>
       </div>
       <div class="project push-left" id="p3">
-        <a href="#"> <img src="https://goo.gl/DPb4sA" alt="p3"> <h4>Project 3</h4> </a> <h5 class="my-paragraph">It was a great project and I gained amazing experience.</h5>
+        <a href="http://abdo-todotoday.bitballoon.com/" target="_blank"> <img src="https://image.ibb.co/bY6OA6/Todo_List_tn.jpg" alt="p3"> <h4>To Do List</h4> </a> <h5 class="my-paragraph">A very interesting To Do list where you can save things you want to do, and come back anytime to check them. <br><span>(I used HTML5 and its LocalStorage new technology, CSS3 and jQuery)<span></h5>
       </div>
       <div class="project push-left" id="p4">
-        <a href="#"> <img src="https://goo.gl/14JStU" alt="p4"> <h4>Project 4</h4> </a> <h5 class="my-paragraph">It was a great project and I gained amazing experience.</h5>
+        <a href="http://abdo-balloonsgame.bitballoon.com/" target="_blank"> <img src="https://image.ibb.co/hQGUiR/Balloons_Game_tn.jpg" alt="p4"> <h4>Balloons Game</h4> </a> <h5 class="my-paragraph">Want to test your quickness and to feel a little excited? then you need to check out the Balloons Game. <br><span>(I used mainly Javascript, and also HTML5, CSS3)<span></h5>
       </div>
       <div class="project push-left" id="p5">
-        <a href="#"> <img src="https://goo.gl/Mw2H1Q" alt="p5"> <h4>Project 5</h4> </a> <h5 class="my-paragraph">It was a great project and I gained amazing experience.</h5>
+        <a href="http://abdo-chinatrip.bitballoon.com/" target="_blank"> <img src="https://image.ibb.co/fhrvOR/China_Album_tn.jpg" alt="p5"> <h4>China Trip Album</h4> </a> <h5 class="my-paragraph">A smooth website that represents a photo album of my trip in China. <br><span>(I used HTML5, CSS3 and a jQuery plugin called Lightbox, loaded through ajax)<span></h5>
       </div>
       <div class="project push-left" id="p6">
-        <a href="#"> <img src="https://goo.gl/Qh6NMj" alt="p6"> <h4>Project 6</h4> </a> <h5 class="my-paragraph">It was a great project and I gained amazing experience.</h5>
+        <a href="http://abdo-portfolio.bitballoon.com/" target="_blank"> <img src="https://image.ibb.co/cjszVG/Portfolio_tn.jpg" alt="p6"> <h4>My Portfolio Page</h4> </a> <h5 class="my-paragraph">My own website, it represents my portfolio. <br><span>(I used HTML5, CSS3 and a tiny bit of Javascript)<span></h5>
       </div>
     </div>
 </div>
@@ -113,26 +118,32 @@
 <div class="contact" >
   <div class="intro push-right" id="contact">
     <h2 class="my-heading"><ins>Contact Abdo</ins> <i class="fa fa-envelope-open-o fa-2x"></i></h2>
-    <p class="my-paragraph">I'll be more than happy to receive your comments, offers, or even friend requests.<p>
+    <p class="my-paragraph">I'll be more than happy to receive your comments, pieces of advice, offers, or even friend requests.<p>
     <ul class="organizelistitems">
-      <a href="https://www.facebook.com/abdobeeh13" target="_blank"> <li id="facebook"><i class="fa fa-facebook-square fa-3x"></i></li> </a>
-      <a href="mailto:abdopoetry@gmail.com" target="_blank"> <li id="email"><i class="fa fa fa-envelope  fa-3x"></i></li> </a> <!--Email-->
-      <a href="#" target="_blank"> <li id="git"><i class="fa fa-git-square fa-3x"></i></li> </a>
-      <a href="#" target="_blank"> <li id="codepen"><i class="fa fa-codepen fa-3x"></i></li> </a>
+      <a href="https://www.linkedin.com/in/abdelrahman-mohamadeen-3536b4a6/" target="_blank"> <li id="facebook"><i class="fa fa-linkedin-square fa-3x"></i></li> </a>
+      <a href="mailto:abdo.mohamadeen@gmail.com" target="_blank"> <li id="email"><i class="fa fa fa-envelope  fa-3x"></i></li> </a> <!--Email-->
+      <a href="https://github.com/Abdo-A" target="_blank"> <li id="git"><i class="fa fa-git-square fa-3x"></i></li> </a>
+      <a href="https://codepen.io/abdopoet/" target="_blank"> <li id="codepen"><i class="fa fa-codepen fa-3x"></i></li> </a>
       <a href="https://youtu.be/Q0-omvd2u1s?t=13" target="_blank"> <li id="love"><i class="fa fa-heartbeat fa-3x"></i></li> </a>
     </ul>
     <blockquote>
       <p>"Better than a man with a good heart is a man with a good heart who communicates it."</p><br>
-      <h5>-A foolish boy</h5><br>
+      <!--<h5>-A foolish boy</h5><br>-->
     </blockquote>
   </div>
-    <form action="mailto:abdobeeh13@gmail.com" class="push-left">
+    <form action="#" class="push-left">
       <div class="container">
+        <h4> Contacting and being contacted by people is a blessing. <br> <br> One more thing about me? I love dealing with new people and new cultures, especially throughout my journey of implementing beautiful code.</h4><br>
+        <div class="img"></div>
+        
+        
+<!--
         <label>Name:</label><input type="text" name="name" placeholder="Your Name" required><br>
         <label>Email:</label><input type="email" name="email" placeholder="Your email" required><br>
         <label>Your Message</label>
         <textarea id="message" name="message" placeholder="Your Message here"></textarea> <br>
         <input type="submit" value="Send" class="btn btn-primary">
+-->
       </div>
    </form>
 </div>
@@ -152,9 +163,9 @@
       <div class="skill my-subheading"><h3>HTML:</h3><div><span style="width:95%">95% &nbsp;</span></div></div><br>
       <div class="skill my-subheading"><h3>CSS:</h3><div><span style="width:95%">95% &nbsp;</span></div></div><br>
       <div class="skill my-subheading"><h3>Javascript:</h3><div><span style="width:90%">90%</span></div></div><br>
-      <div class="skill my-subheading"><h3>Bootstrap:</h3><div><span style="width:80%">80%</span></div></div><br>
-      <div class="skill my-subheading"><h3>SASS:</h3><div><span style="width:80%">80%</span></div></div><br>
-      <div class="skill my-subheading"><h3>Angular:</h3><div><span style="width:20%">20%</span></div></div>
+      <div class="skill my-subheading"><h3>jQuery:</h3><div><span style="width:90%">90%</span></div></div><br>
+      <div class="skill my-subheading"><h3>SASS:</h3><div><span style="width:95%">95%</span></div></div><br>
+      <div class="skill my-subheading"><h3>C++:</h3><div><span style="width:80%">80%</span></div></div>
     </div>
   </div>
 </div>
@@ -167,7 +178,7 @@
   </div>
 </div>
 <!--End Footer-->
-  
+		  
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
     <script src="script.js"></script>
