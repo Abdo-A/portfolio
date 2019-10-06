@@ -41,12 +41,17 @@ body {
 }
 
 .slider .nav ul {margin-right: 25%; margin-top: 20px;}
-.slider .nav ul li {font-family: 'Asap', sans-serif; font-size:16px; display:inline-block; text-transform: uppercase;mix-blend-mode: exclusion;}
-.slider .nav ul li a {color: #bd8c8c;}
+.slider .nav ul li {font-family: 'Asap', sans-serif; font-size:16px; display:block; text-transform: uppercase;}
+.slider .nav ul li a {color: #464141be;}
+.slider .nav ul li a:hover {color: #3b1c1c;}
 .slider .nav ul li:first-of-type {position:relative}
 #audio_icon {position:absolute; right:120px;bottom:-9px;width:35px;cursor:pointer;z-index:2;mix-blend-mode: normal !important}
 #audio_icon:hover {border:2px solid black}
-@media (min-width:769px) and (max-width:1185px) {#audio_icon{right:40px;top:30px}}
+@media (min-width:769px) and (max-width:1185px) {
+.slider .nav ul {
+  margin-right:0
+}
+}
 @media (max-width: 767px) {
   .slider .nav ul li {
     display: block !important;
@@ -73,29 +78,6 @@ body {
   }
   .slider .nav ul li:first-of-type {position:static}
   #audio_icon {left:100px;top:0px} 
-}
-
-/*.slider .nav ul li a:hover {color:#000; border:5px solid #F00; padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;}*/
-.slider .nav ul li a#a_about:hover {
-  color:#FAFAFA; /*padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
-  border-left:5px solid #121212;
-  border-bottom:5px solid #121212;
-  border-top:5px solid #01A99C;
-  border-right:5px solid #01A99C;*/
-}
-.slider .nav ul li a#a_portfolio:hover {
-  color:#FAFAFA; /*padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
-  border-left:5px solid #A2B2C1;
-  border-bottom:5px solid #A2B2C1;
-  border-top:5px solid #3A4551;
-  border-right:5px solid #3A4551;*/
-}
-.slider .nav ul li a#a_contact:hover {
-  color:#FAFAFA; /*padding: 10px 21px 10px 21px; margin: -10px -26px -10px -26px;
-  border-left:5px solid #284563;
-  border-bottom:5px solid #284563;
-  border-top:5px solid #AADCD2;
-  border-right:5px solid #AADCD2;*/
 }
 
 .slider .nonav {
@@ -236,16 +218,25 @@ body {
 /*Start About Me*/
 .aboutme {
   height: 100vh;                                            /******************************height*/
-  
 }
+
 .aboutme .intro {
   width: 48%;
-  margin: 0.5% 1%; padding:3%;
+  margin: 0.5% 1%;
+  padding:3%;
   background-color: #F1AA90;
-  background: linear-gradient(to right, #434343 0%, black 100%);
+  background: linear-gradient(to right, #292121 0%, black 100%);
   height: 100vh;
   overflow: hidden;
+  transition: transform 0.3s;
 }
+
+.aboutme .intro:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
+}
+
 .aboutme .intro h2 {color: #04A0A7; margin: 3% 0 6% 0;}
 .aboutme .intro ul {}
 .aboutme .intro ul li {margin: 6.2vh 0;}
@@ -256,6 +247,12 @@ body {
   margin: 0.5% 1%;
   background: linear-gradient(90deg, #01a99c 10%, #0698b1 90%);
   height: 100vh;
+  transition: transform 0.3s;
+}
+.aboutme .image:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
 }
 .aboutme .image img {
   width: 100%;
@@ -270,7 +267,14 @@ body {
 .aboutme .image p {
   font-size: 160%;
 }
-@media (min-width:769px) and (max-width:1185px) {.aboutme .intro ul li {margin:2.5vh;} .aboutme .intro ul{text-align: left;}}
+@media (min-width:769px) and (max-width:1185px) {
+  .aboutme .intro ul li {margin:2.5vh;} .aboutme .intro ul{text-align: left;}}
+@media(min-width:769px) {
+  .aboutme{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+}
 @media (max-width: 767px) {
   .aboutme {
     height: auto;
@@ -294,6 +298,13 @@ body {
   background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
   height: 100vh;
   color: #38424E;
+  transition: transform 0.3s;
+}
+
+.portfolio .intro:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
 }
 .portfolio .intro h2 {margin-bottom: 9%; color:#752020;}
 .portfolio .intro h2 i {vertical-align: middle}
@@ -308,10 +319,15 @@ body {
   width: 68%;
   margin:0.5% 1%; padding:0;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  background: linear-gradient(to right, #434343 0%, black 100%);
   height: 100vh;
   font-family: 'Acme', Arial;
-  background: linear-gradient(to right, #434343 0%, black 100%);
+  background: linear-gradient(to right, #292121 0%, black 100%);
+  transition: transform 0.3s;
+}
+.portfolio .images:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
 }
 .portfolio .images .project {
   width: 33.33333%;
@@ -340,6 +356,12 @@ body {
 .portfolio .images .project#p6 {/*background: linear-gradient(to right, #283048, #859398);*/}
 
 @media (min-width:769px) and (max-width:1185px) {.portfolio .intro {padding:0} .portfolio .intro p {text-align: left;}}
+@media(min-width:769px) {
+  .portfolio{
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+  }
+}
 @media (max-width: 767px) {
   .portfolio {
     height: auto;
@@ -370,7 +392,13 @@ body {
   height: 100vh;
   color: antiquewhite;
   text-align: center;
-  background: linear-gradient(to right, #434343 0%, black 100%);
+  background: linear-gradient(to right, #292121 0%, black 100%);
+  transition: transform 0.3s;
+}
+.contact form:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
 }
 .contact form h4 {
   font-family: 'Maven Pro', Arial;
@@ -383,22 +411,19 @@ body {
   height: 60vh;
   border-radius: 10px;
 }
-/*
-.contact form input, .contact form textarea {
-  margin-bottom: 6vh;
-}
-.contact form textarea {
-  width: 70%;
-  height: 30vh;
-}
-.contact form label {font-family: 'Acme', Arial; color: #FFCD01}
-*/
+
 .contact .intro {
   width: 30%;
   margin:0; padding:3%;
   background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
   height: 100vh;
   color: #2A4765;
+  transition: transform 0.3s;
+}
+.contact .intro:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
 }
 .contact .intro {width: 28%; margin:0.5% 1%}
 .contact .intro h2 {margin-bottom: 12%;color: #752020;}
@@ -419,6 +444,12 @@ body {
 }
 
 @media (min-width:769px) and (max-width:1185px) {.contact .intro p {text-align: left;}}
+@media(min-width:769px) {
+  .contact{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+}
 @media (max-width: 767px) {
   .contact {
     height: auto;
@@ -444,7 +475,14 @@ body {
   background: linear-gradient(to right, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%); 
   height: 100vh;
   color: #262829;
+  transition: transform 0.3s;
 }
+.learning .intro:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
+}
+
 .learning .intro h2 {color: #752020; margin-bottom:15%;}
 .learning .intro p {color:#262829; text-align: left;}
 .learning .intro p:last-of-type {font-size: 220%; color: #333; text-align: center;}
@@ -452,10 +490,17 @@ body {
   width: 68%;
   margin:0.5% 1%; padding:5% 3% 5% 3%;
   background-color: antiquewhite;
-  background: linear-gradient(to right, #434343 0%, black 100%);
+  background: linear-gradient(to right, #292121 0%, black 100%);
   height: 100vh;
   color:#7ED7D2;
+  transition: transform 0.3s;
 }
+.learning .curves:hover {
+  transform: scale(1.01, 1.01);
+  -ms-transform: scale(1.01, 1.01);
+  -webkit-transform: scale(1.01, 1.01);
+}
+
 .learning .curves .skill {margin-left:-10vh; margin-right:-10vh}
 .learning .curves .skill h3 {width:25%;display: inline-block; margin-bottom: 0%}
 .learning .curves .skill div {width: 61%; height: 4vh; background-color: #BBB; display: inline-block; border-radius:0px 10px 10px 0px;}

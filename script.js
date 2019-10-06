@@ -40,7 +40,7 @@ setTimeout(function(){
     fh.style.animation="opac0 0.5s 1s forwards";
     setTimeout(function(){fh.style.animation="opac1 1.5s forwards";fh.innerHTML="Software";},1500);
     setTimeout(function(){sh.style.animation="opac0 0.5s forwards";},2000);
-    setTimeout(function(){sh.style.animation="opac1 1.5s forwards";sh.innerHTML="Engineer";},2500);
+    setTimeout(function(){sh.style.animation="opac1 1.5s forwards";sh.innerHTML="Developer";},2500);
     setTimeout(function(){fh.style.animation="opac0 0.5s forwards";},6000);
     setTimeout(function(){fh.style.animation="opac1 1.5s forwards";fh.innerHTML="Front End";},6500);
     setTimeout(function(){sh.style.animation="opac0 0.5s forwards";},7000);
@@ -48,5 +48,5 @@ setTimeout(function(){
     setTimeout(function(){fh.style.animation="opac0 0.5s forwards";},11000);
     setTimeout(function(){fh.style.animation="opac1 1.5s forwards";fh.innerHTML="Web";},11500);
     setTimeout(function(){sh.style.animation="opac0 0.5s forwards";},12000);
-    setTimeout(function(){sh.style.animation="opac1 1.5s forwards";sh.innerHTML="Developer";},12500);
+    setTimeout(function(){sh.style.animation="opac1 1.5s forwards";sh.innerHTML="Engineer";},12500);
 }
