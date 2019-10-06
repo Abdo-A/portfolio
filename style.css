@@ -42,7 +42,7 @@ body {
 
 .slider .nav ul {margin-right: 25%; margin-top: 20px;}
 .slider .nav ul li {font-family: 'Asap', sans-serif; font-size:16px; display:block; text-transform: uppercase;}
-.slider .nav ul li a {color: #464141be;}
+.slider .nav ul li a {color: #464141be;z-index: 1000;}
 .slider .nav ul li a:hover {color: #3b1c1c;}
 .slider .nav ul li:first-of-type {position:relative}
 #audio_icon {position:absolute; right:120px;bottom:-9px;width:35px;cursor:pointer;z-index:2;mix-blend-mode: normal !important}
