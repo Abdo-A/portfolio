@@ -21,6 +21,8 @@ body {
   height: 100vh;                                           /******************************height*/
   background: url('https://image.ibb.co/crLgcw/mmexport1504990823140.jpg');
 	/*https://image.ibb.co/mBS3dG/mmexport1504990914952_011.jpg*/
+  border-bottom: 3px dotted black;
+  box-sizing: content-box;
   background-position: 0% 65%;
   background-size: cover;
   text-align: center;
